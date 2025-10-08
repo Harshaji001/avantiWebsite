@@ -1,289 +1,1674 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Avanti Classes Chapra — JEE & NEET Coaching in Saran, Bihar</title>
-  <meta name="description" content="Join Avanti Classes Chapra for expert JEE & NEET coaching, foundation courses and doubt sessions. Enroll today — free demo available." />
-  <link rel="canonical" href="https://yourdomain.com/" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Avanti Classes Chapra — JEE & NEET Coaching in Saran, Bihar" />
-  <meta property="og:description" content="Personalized coaching, experienced faculty, and proven results — now in Chapra, Saran, Bihar." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourdomain.com/" />
-  <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- LocalBusiness JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"EducationalOrganization",
-    "name":"Avanti Classes Chapra",
-    "url":"https://yourdomain.com",
-    "logo":"https://yourdomain.com/logo.png",
-    "telephone":"+91 XXXXXXXXXX",
-    "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"Near [landmark], Chapra",
-      "addressLocality":"Chapra",
-      "addressRegion":"Bihar",
-      "postalCode":"841301",
-      "addressCountry":"IN"
-    },
-    "openingHours":"Mo-Fr 09:00-18:00",
-    "sameAs":[
-      "https://facebook.com/yourpage",
-      "https://instagram.com/yourpage"
-    ]
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avanti Classes - Premium Education in Chapra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --primary-dark: #564FD8;
+            --secondary: #FF6584;
+            --accent: #36D1DC;
+            --dark: #1A1A2E;
+            --darker: #0F0F1B;
+            --light: #F5F5F7;
+            --gray: #8A8A9D;
+            --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+            --card-gradient: linear-gradient(145deg, #232343, #1A1A2E);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--darker);
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        /* Particles Background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(26, 26, 46, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav.scrolled {
+            padding: 1rem 5%;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(108, 99, 255, 0.4);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(108, 99, 255, 0.2);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(108, 99, 255, 0.3);
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(108, 99, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--primary);
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: var(--card-gradient);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .card-1 {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+            width: 200px;
+        }
+
+        .card-2 {
+            bottom: 20%;
+            right: 10%;
+            animation-delay: 2s;
+            width: 180px;
+        }
+
+        .card-3 {
+            top: 50%;
+            left: 5%;
+            animation-delay: 4s;
+            width: 220px;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Sections Common Styling */
+        section {
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-subtitle {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-desc {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        #about {
+            background: var(--dark);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+        }
+
+        .directors {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .director-card {
+            background: var(--card-gradient);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .director-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .director-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            border: 3px solid var(--primary);
+        }
+
+        .director-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--card-gradient);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: rgba(108, 99, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--gray);
+        }
+
+        /* Faculty Section */
+        #faculty {
+            background: var(--dark);
+        }
+
+        .faculty-tabs {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--gradient);
+            border-color: transparent;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .teacher-card {
+            background: var(--card-gradient);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .teacher-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .teacher-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .teacher-card:hover .teacher-img img {
+            transform: scale(1.1);
+        }
+
+        .teacher-info {
+            padding: 1.5rem;
+        }
+
+        .teacher-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .teacher-info p {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .teacher-info .exp {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            height: 250px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        /* Reviews Section */
+        #reviews {
+            background: var(--dark);
+        }
+
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .reviews-slider {
+            display: flex;
+            overflow: hidden;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .review-card {
+            background: var(--card-gradient);
+            padding: 2rem;
+            border-radius: 20px;
+            min-width: 350px;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .review-text:before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary);
+            position: absolute;
+            top: -1.5rem;
+            left: -1rem;
+            opacity: 0.3;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Toppers Section */
+        .toppers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .topper-card {
+            background: var(--card-gradient);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topper-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+        }
+
+        .topper-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .topper-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            border: 3px solid var(--primary);
+        }
+
+        .topper-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .topper-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .topper-card .achievement {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .topper-card .score {
+            color: var(--gray);
+        }
+
+        /* Notice Section */
+        #notice {
+            background: var(--dark);
+        }
+
+        .notice-board {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-gradient);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .notice-item {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .notice-item:last-child {
+            border-bottom: none;
+        }
+
+        .notice-item:hover {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+        }
+
+        .notice-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .notice-item p {
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .notice-date {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: var(--card-gradient);
+            padding: 2rem;
+            border-radius: 20px;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-card h3 i {
+            color: var(--primary);
+        }
+
+        .contact-form {
+            background: var(--card-gradient);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--light);
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 4rem 5% 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--gradient);
+        }
+
+        .footer-col p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--gradient);
+            transform: translateY(-3px);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content, .about-content, .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 2.3rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .directors {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-btns {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .tab-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Top contact strip -->
-  <div class="top-strip">
-    <div class="container">
-      <div>📞 +91 XXXXXXXXXX</div>
-      <div>📧 chapra@avanticlasses.in</div>
-    </div>
-  </div>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a class="logo" href="#">
-        <img src="logo-placeholder.png" alt="Avanti Classes Chapra logo" />
-        <span>Avanti Classes <small>Chapra</small></span>
-      </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#courses">Courses</a>
-        <a href="#results">Results</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-        <button class="btn btn-primary" id="openEnroll">Enroll Now</button>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Avanti Classes — Chapra (Saran, Bihar)</h1>
-        <p class="lead">Concept-first coaching for <strong>JEE</strong> · <strong>NEET</strong> · School Excellence</p>
-        <p>Personalized classes, experienced faculty, focused doubt sessions, and proven results — now in Chapra.</p>
-        <div class="hero-ctas">
-          <button class="btn btn-primary" id="openEnroll2">Book Free Demo</button>
-          <a class="btn btn-outline" href="#contact">Visit Branch</a>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            Avanti Classes
+        </a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#faculty">Faculty</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#toppers">Toppers</a>
+            <a href="#notice">Notice</a>
+            <a href="#contact">Contact</a>
         </div>
-        <ul class="trust">
-          <li>✅ Interactive classes</li>
-          <li>✅ Test series & doubt camps</li>
-          <li>✅ Small batch sizes</li>
-        </ul>
-      </div>
-      <div class="hero-media">
-        <img src="hero-students.jpg" alt="Students learning in classroom" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Avanti Chapra -->
-  <section class="features container">
-    <h2>Why Avanti Classes — Chapra?</h2>
-    <div class="features-grid">
-      <div class="card">
-        <h3>Experienced Faculty</h3>
-        <p>Teachers with proven track record in JEE & NEET guidance and board exams.</p>
-      </div>
-      <div class="card">
-        <h3>Concept-First Teaching</h3>
-        <p>Strong fundamentals, problem-solving, and regular assessments.</p>
-      </div>
-      <div class="card">
-        <h3>Personal Attention</h3>
-        <p>Small batches and dedicated doubt sessions for each student.</p>
-      </div>
-      <div class="card">
-        <h3>Result-Oriented</h3>
-        <p>Structured test series and targeted revision to maximize results.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Courses -->
-  <section id="courses" class="container courses">
-    <h2>Our Courses</h2>
-    <div class="courses-grid">
-      <article class="course-card">
-        <h3>JEE Foundation</h3>
-        <p>For Class 8–10: build strong fundamentals for long-term success.</p>
-        <a class="more" href="#">More →</a>
-      </article>
-      <article class="course-card">
-        <h3>NEET Preparation</h3>
-        <p>High-yield biology, chemistry & physics with frequent tests.</p>
-        <a class="more" href="#">More →</a>
-      </article>
-      <article class="course-card">
-        <h3>Class 11–12 Regular</h3>
-        <p>Full syllabus coverage plus revision modules and test-series.</p>
-        <a class="more" href="#">More →</a>
-      </article>
-      <article class="course-card">
-        <h3>Crash Courses</h3>
-        <p>Intensive 6–8 week prep before boards / entrance tests.</p>
-        <a class="more" href="#">More →</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- Results -->
-  <section id="results" class="container results">
-    <h2>Results & Toppers</h2>
-    <div class="results-slider" id="resultsSlider">
-      <div class="result-card">
-        <img src="topper1.jpg" alt="Topper photo" />
-        <h4>Rohit Kumar</h4>
-        <p>JEE Mains — 98.6 percentile</p>
-      </div>
-      <div class="result-card">
-        <img src="topper2.jpg" alt="Topper photo" />
-        <h4>Sunita Devi</h4>
-        <p>NEET — Top state rank</p>
-      </div>
-      <div class="result-card">
-        <img src="topper3.jpg" alt="Topper photo" />
-        <h4>Akash Singh</h4>
-        <p>Board Topper — 96%</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="container testimonials">
-    <h2>What Students & Parents Say</h2>
-    <div class="testimonial-slider" id="testimonialSlider">
-      <blockquote class="testimonial">
-        <p>"Avanti Chapra helped me clear my basics and face JEE confidently."</p>
-        <cite>— Priya | NEET Aspirant</cite>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>"Excellent teachers and regular tests — real improvement in scores."</p>
-        <cite>— Mr. Verma | Parent</cite>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>"Small batches & doubt sessions made all the difference."</p>
-        <cite>— Aman | Class 12</cite>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery" class="container gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="gallery1.jpg" alt="Classroom" loading="lazy" />
-      <img src="gallery2.jpg" alt="Event" loading="lazy" />
-      <img src="gallery3.jpg" alt="Students" loading="lazy" />
-      <img src="gallery4.jpg" alt="Teacher" loading="lazy" />
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="container contact">
-    <h2>Contact & Visit</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3>Visit Us</h3>
-        <p>Avanti Classes, Near [landmark], Chapra, Saran, Bihar — PIN: 841301</p>
-        <p>Phone: <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></p>
-        <p>Email: <a href="mailto:chapra@avanticlasses.in">chapra@avanticlasses.in</a></p>
-        <p>Opening Hours: Mon–Sat 9:00 AM – 6:00 PM</p>
-        <!-- Google Map embed placeholder: replace src below with your Google Maps embed -->
-        <div class="map-wrap">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!2m12!..." 
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
-          </iframe>
+        <a href="#contact" class="nav-cta">Enroll Now</a>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
         </div>
-      </div>
+    </nav>
 
-      <form id="enquiryForm" class="contact-form" method="POST" action="/api/enquiry">
-        <h3>Enquire / Book Demo</h3>
-        <label><span>Name</span><input type="text" name="name" required></label>
-        <label><span>Phone</span><input type="tel" name="phone" required pattern="[0-9]{10}"></label>
-        <label><span>Email</span><input type="email" name="email"></label>
-        <label><span>Interested In</span>
-          <select name="course">
-            <option>JEE Foundation</option>
-            <option>NEET</option>
-            <option>Class 11–12</option>
-            <option>Crash Course</option>
-          </select>
-        </label>
-        <label><span>Message</span><textarea name="message" rows="3"></textarea></label>
-        <button class="btn btn-primary" type="submit">Submit Enquiry</button>
-        <p class="note">We will contact you within 24 hours. For urgent queries WhatsApp us.</p>
-      </form>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">Premium Education in Chapra</span>
+                <h1 class="hero-title">Unlock Your Potential with Avanti Classes</h1>
+                <p class="hero-desc">Expert guidance for JEE, NEET, and Board exams with proven results. Join the premier coaching institute in Chapra, Bihar.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">Book Free Demo <i class="fas fa-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <h3>98% Success Rate</h3>
+                    <p>In Board Exams</p>
+                </div>
+                <div class="floating-card card-2">
+                    <h3>50+ Toppers</h3>
+                    <p>In JEE & NEET</p>
+                </div>
+                <div class="floating-card card-3">
+                    <h3>15+ Years</h3>
+                    <p>Of Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <img src="logo-placeholder.png" alt="logo" class="footer-logo" />
-        <p>Avanti Classes Chapra — Building bright futures for JEE & NEET aspirants.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <a href="#courses">Courses</a>
-        <a href="#results">Results</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div>
-        <h4>Follow Us</h4>
-        <a href="#">Facebook</a><br/>
-        <a href="#">Instagram</a>
-      </div>
-    </div>
-    <div class="container copyright">
-      <small>© <span id="year"></span> Avanti Classes Chapra. All rights reserved.</small>
-    </div>
-  </footer>
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <span class="section-subtitle">About Us</span>
+            <h2 class="section-title">Why Choose Avanti Classes?</h2>
+            <p class="section-desc">We are committed to providing quality education with a focus on conceptual understanding and result-oriented teaching.</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Avanti Classes Campus">
+            </div>
+            <div class="about-text">
+                <h3>Transforming Education in Chapra</h3>
+                <p>Avanti Classes has been a pioneer in coaching for JEE, NEET, and Board exams in Chapra, Bihar. With over 15 years of experience, we have helped thousands of students achieve their academic goals.</p>
+                <p>Our unique teaching methodology focuses on building strong fundamentals, regular assessments, and personalized attention to ensure every student reaches their full potential.</p>
+                
+                <div class="directors">
+                    <div class="director-card">
+                        <div class="director-img">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mr. Rajesh Kumar">
+                        </div>
+                        <h4>Mr. Rajesh Kumar</h4>
+                        <p>Director | M.Sc Physics</p>
+                        <p>15+ years experience</p>
+                    </div>
+                    <div class="director-card">
+                        <div class="director-img">
+                            <img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mrs. Sunita Sharma">
+                        </div>
+                        <h4>Mrs. Sunita Sharma</h4>
+                        <p>Co-Director | M.A Education</p>
+                        <p>Student Mentoring Expert</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Floating WhatsApp button -->
-  <a class="whatsapp-fab" href="https://wa.me/91XXXXXXXXXX?text=Hello%20Avanti%20Chapra%20–%20I%20want%20to%20enquire" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    💬
-  </a>
+    <!-- Features Section -->
+    <section id="features">
+        <div class="section-header">
+            <span class="section-subtitle">Our Features</span>
+            <h2 class="section-title">What Makes Us Different</h2>
+            <p class="section-desc">We provide a comprehensive learning environment with facilities and methodologies designed for success.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3>Expert Faculty</h3>
+                <p>Learn from highly qualified and experienced teachers with proven track records.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Study Material</h3>
+                <p>Comprehensive and updated study material designed by subject experts.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-vial"></i>
+                </div>
+                <h3>Modern Labs</h3>
+                <p>Well-equipped physics, chemistry, and biology labs for practical learning.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Regular Tests</h3>
+                <p>Weekly tests and performance analysis to track progress and improvement.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Small Batches</h3>
+                <p>Limited students per batch to ensure personalized attention for each student.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Result Oriented</h3>
+                <p>Proven track record of producing toppers in JEE, NEET, and Board exams.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Enroll modal -->
-  <div class="modal" id="enrollModal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" id="closeModal">✕</button>
-      <h3>Book Free Demo Class</h3>
-      <form id="modalForm" action="/api/enquiry" method="POST">
-        <label><span>Name</span><input name="name" required></label>
-        <label><span>Phone</span><input name="phone" required pattern="[0-9]{10}"></label>
-        <label><span>Course</span>
-          <select name="course">
-            <option>JEE Foundation</option>
-            <option>NEET</option>
-            <option>Class 11–12</option>
-            <option>Crash Course</option>
-          </select>
-        </label>
-        <button class="btn btn-primary" type="submit">Request Demo</button>
-      </form>
-    </div>
-  </div>
+    <!-- Faculty Section -->
+    <section id="faculty">
+        <div class="section-header">
+            <span class="section-subtitle">Our Faculty</span>
+            <h2 class="section-title">Meet Our Expert Teachers</h2>
+            <p class="section-desc">Our faculty members are subject matter experts with years of experience in teaching and mentoring students.</p>
+        </div>
+        <div class="faculty-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="physics">Physics</button>
+                <button class="tab-btn" data-tab="chemistry">Chemistry</button>
+                <button class="tab-btn" data-tab="maths">Mathematics</button>
+                <button class="tab-btn" data-tab="biology">Biology</button>
+            </div>
+            
+            <div id="physics" class="tab-content active">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dr. A Sharma">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Dr. A Sharma</h3>
+                        <p>Physics Expert</p>
+                        <p class="exp">M.Sc, PhD | 12 years experience</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mr. R Kumar">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Mr. R Kumar</h3>
+                        <p>JEE Physics Specialist</p>
+                        <p class="exp">M.Tech | 8 years experience</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="chemistry" class="tab-content">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mrs. S Gupta">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Mrs. S Gupta</h3>
+                        <p>Chemistry Expert</p>
+                        <p class="exp">M.Sc Chemistry | 10 years experience</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1551836026-d5c088a2d043?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mr. P Singh">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Mr. P Singh</h3>
+                        <p>Organic Chemistry</p>
+                        <p class="exp">M.Sc Organic Chemistry | 7 years experience</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="maths" class="tab-content">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mr. V Singh">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Mr. V Singh</h3>
+                        <p>Mathematics Expert</p>
+                        <p class="exp">M.Sc Mathematics | 15 years experience</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ms. A Verma">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Ms. A Verma</h3>
+                        <p>Board Exam Specialist</p>
+                        <p class="exp">M.Sc Maths | 6 years experience</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="biology" class="tab-content">
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mrs. P Yadav">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Mrs. P Yadav</h3>
+                        <p>Biology Expert</p>
+                        <p class="exp">M.Sc Botany | 9 years experience</p>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-img">
+                        <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Dr. R Jha">
+                    </div>
+                    <div class="teacher-info">
+                        <h3>Dr. R Jha</h3>
+                        <p>Zoology Expert</p>
+                        <p class="exp">M.Sc, PhD Zoology | 11 years experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-header">
+            <span class="section-subtitle">Gallery</span>
+            <h2 class="section-title">Life at Avanti Classes</h2>
+            <p class="section-desc">Take a look at our campus, classrooms, events, and student activities.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Classroom">
+                <div class="gallery-overlay">
+                    <h3>Modern Classrooms</h3>
+                    <p>Fully equipped for interactive learning</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Lab Session">
+                <div class="gallery-overlay">
+                    <h3>Lab Sessions</h3>
+                    <p>Hands-on practical learning</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Group Study">
+                <div class="gallery-overlay">
+                    <h3>Group Study</h3>
+                    <p>Collaborative learning environment</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Teacher Student">
+                <div class="gallery-overlay">
+                    <h3>Personal Attention</h3>
+                    <p>One-on-one doubt solving</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Event">
+                <div class="gallery-overlay">
+                    <h3>Avanti 2.0 Event</h3>
+                    <p>Annual science exhibition</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Award Ceremony">
+                <div class="gallery-overlay">
+                    <h3>Award Ceremony</h3>
+                    <p>Celebrating student achievements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <div class="section-header">
+            <span class="section-subtitle">Testimonials</span>
+            <h2 class="section-title">What Students & Parents Say</h2>
+            <p class="section-desc">Hear from our students and parents about their experience with Avanti Classes.</p>
+        </div>
+        <div class="reviews-container">
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <div class="review-text">
+                        Avanti Classes helped me improve my Physics concepts tremendously. The faculty is very supportive and the study material is excellent.
+                    </div>
+                    <div class="review-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Rohit Kumar">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rohit Kumar</h4>
+                            <p>JEE Aspirant</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-text">
+                        My daughter's performance improved significantly after joining Avanti. The regular tests and personalized attention made all the difference.
+                    </div>
+                    <div class="review-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mrs. Sharma">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mrs. Sharma</h4>
+                            <p>Parent</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-text">
+                        The regular tests and doubt sessions at Avanti helped me crack NEET with a good rank. Teachers are very dedicated and supportive.
+                    </div>
+                    <div class="review-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Priya Singh">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Singh</h4>
+                            <p>NEET Qualified</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toppers Section -->
+    <section id="toppers">
+        <div class="section-header">
+            <span class="section-subtitle">Our Achievers</span>
+            <h2 class="section-title">Meet Our Toppers</h2>
+            <p class="section-desc">Our students have consistently achieved outstanding results in competitive exams.</p>
+        </div>
+        <div class="toppers-grid">
+            <div class="topper-card">
+                <div class="topper-img">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Amit Kumar">
+                </div>
+                <h3>Amit Kumar</h3>
+                <p class="achievement">JEE Mains: 98.2%</p>
+                <p class="score">Class 12: 95.6%</p>
+            </div>
+            <div class="topper-card">
+                <div class="topper-img">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Priya Singh">
+                </div>
+                <h3>Priya Singh</h3>
+                <p class="achievement">NEET: AIR 1245</p>
+                <p class="score">Class 12: 96.2%</p>
+            </div>
+            <div class="topper-card">
+                <div class="topper-img">
+                    <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Rahul Verma">
+                </div>
+                <h3>Rahul Verma</h3>
+                <p class="achievement">JEE Mains: 97.8%</p>
+                <p class="score">Class 12: 94.8%</p>
+            </div>
+            <div class="topper-card">
+                <div class="topper-img">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Sunita Yadav">
+                </div>
+                <h3>Sunita Yadav</h3>
+                <p class="achievement">NEET: AIR 2156</p>
+                <p class="score">Class 12: 95.4%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Section -->
+    <section id="notice">
+        <div class="section-header">
+            <span class="section-subtitle">Announcements</span>
+            <h2 class="section-title">Notice Board</h2>
+            <p class="section-desc">Stay updated with the latest news and announcements from Avanti Classes.</p>
+        </div>
+        <div class="notice-board">
+            <div class="notice-item">
+                <h3>New Batch Starting Soon</h3>
+                <p>New batches for JEE & NEET 2024 starting from 15th November. Limited seats available.</p>
+                <p class="notice-date">Date: 10th November 2023</p>
+            </div>
+            <div class="notice-item">
+                <h3>Scholarship Test</h3>
+                <p>Avanti Scholarship Test for Class 9-12 students on 20th November. Up to 50% scholarship available.</p>
+                <p class="notice-date">Date: 5th November 2023</p>
+            </div>
+            <div class="notice-item">
+                <h3>Parent-Teacher Meeting</h3>
+                <p>Monthly parent-teacher meeting scheduled for 25th November. All parents are requested to attend.</p>
+                <p class="notice-date">Date: 1st November 2023</p>
+            </div>
+            <div class="notice-item">
+                <h3>Holiday Notice</h3>
+                <p>Institute will remain closed on 12th November for Chhath Puja.</p>
+                <p class="notice-date">Date: 28th October 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <span class="section-subtitle">Get In Touch</span>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-desc">Have questions? Reach out to us for more information about our courses and admission process.</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+                    <p>Near Gandhi Maidan, Main Road</p>
+                    <p>Chapra, Bihar - 841301</p>
+                </div>
+                <div class="contact-card">
+                    <h3><i class="fas fa-phone-alt"></i> Phone Number</h3>
+                    <p>+91 XXXXXXXXXX</p>
+                    <p>+91 XXXXXXXXXX</p>
+                </div>
+                <div class="contact-card">
+                    <h3><i class="fas fa-envelope"></i> Email Address</h3>
+                    <p>info@avanticlasseschapra.com</p>
+                    <p>admission@avanticlasseschapra.com</p>
+                </div>
+                <div class="contact-card">
+                    <h3><i class="fas fa-clock"></i> Opening Hours</h3>
+                    <p>Monday - Saturday: 8:00 AM - 8:00 PM</p>
+                    <p>Sunday: 10:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Course Interested In</label>
+                        <select id="course" class="form-control" required>
+                            <option value="">Select a course</option>
+                            <option value="jee">JEE Preparation</option>
+                            <option value="neet">NEET Preparation</option>
+                            <option value="foundation">Foundation Course</option>
+                            <option value="board">Board Exam Preparation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Avanti Classes</h3>
+                <p>Premier coaching institute in Chapra, Bihar for JEE, NEET, and Board exam preparation with proven results and experienced faculty.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#faculty">Faculty</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Courses</h3>
+                <ul>
+                    <li><a href="#">JEE Preparation</a></li>
+                    <li><a href="#">NEET Preparation</a></li>
+                    <li><a href="#">Foundation Course</a></li>
+                    <li><a href="#">Board Exams</a></li>
+                    <li><a href="#">Crash Courses</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Chapra, Bihar</li>
+                    <li><i class="fas fa-phone"></i> +91 XXXXXXXXXX</li>
+                    <li><i class="fas fa-envelope"></i> info@avanti.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Sat: 8AM-8PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Avanti Classes. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Initialize Particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#6C63FF" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#6C63FF",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // Sticky Navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Faculty Tabs
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(tc => tc.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.feature-card, .teacher-card, .topper-card, .review-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.feature-card, .teacher-card, .topper-card, .review-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        window.addEventListener('scroll', animateOnScroll);
+        // Trigger once on load
+        window.addEventListener('load', animateOnScroll);
+    </script>
 </body>
 </html>
